@@ -2,7 +2,7 @@
 
 > This file is a per-type extract from the canonical specification at [`spec/v0.1/tessera.md`](../tessera.md). For the full envelope, canonicalization rules, time anchoring, and verification algorithm, read the canonical spec. This extract exists for navigation and for implementers building support for a single type.
 
-The primary type used by Veritas. Attests that the issuer authored the referenced content.
+The primary type used by Confirmata. Attests that the issuer authored the referenced content.
 
 ```json
 "type_payload": {

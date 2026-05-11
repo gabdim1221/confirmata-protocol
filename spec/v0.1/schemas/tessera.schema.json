@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/gabdim1221/veritas-protocol/spec/v0.1/schemas/tessera.schema.json",
+  "$id": "https://github.com/gabdim1221/confirmata-protocol/spec/v0.1/schemas/tessera.schema.json",
   "title": "Tessera Envelope v0.1",
   "description": "JSON Schema for the Tessera v0.1 envelope as defined in spec/v0.1/tessera.md §2. Implementations MAY include additional fields in any object as long as the canonicalization and signing rules are preserved (spec §12); accordingly, additionalProperties is permitted by default.",
   "type": "object",

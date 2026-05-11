@@ -2,8 +2,8 @@
 
 **Status.** Draft. Public revision welcomed.
 **License.** Apache 2.0.
-**Repository.** `github.com/veritas/veritas-protocol`.
-**Reference implementation.** Veritas (`github.com/veritas/veritas-backend`, `veritas-desktop`, `veritas-extension`).
+**Repository.** `github.com/confirmata/confirmata-protocol`.
+**Reference implementation.** Confirmata (`github.com/confirmata/confirmata-backend`, `confirmata-desktop`, `confirmata-extension`).
 
 ---
 
@@ -11,7 +11,7 @@
 
 A Tessera is a small, signed, time-anchored JSON document that attests to a discrete human act. v0.1 defines the envelope, seven canonical Tessera types, four levels of assurance, and a cryptographic scheme for issuance and verification.
 
-The first deployed type is `authorship` — used by the Veritas product to certify that a human authored a piece of work. Future types extend the protocol without breaking existing implementations.
+The first deployed type is `authorship` — used by the Confirmata product to certify that a human authored a piece of work. Future types extend the protocol without breaking existing implementations.
 
 The protocol's design goals, in priority order: (1) **verifiability without a central authority**, (2) **privacy by default**, (3) **simplicity sufficient for a competent engineer to implement in a weekend**, (4) **legal admissibility under existing electronic signature law**.
 
@@ -156,7 +156,7 @@ The delegation Tessera itself follows the same signing rules and is anchored on 
 
 ### 7.1 `authorship`
 
-The primary type used by Veritas. Attests that the issuer authored the referenced content.
+The primary type used by Confirmata. Attests that the issuer authored the referenced content.
 
 ```json
 "type_payload": {
@@ -342,7 +342,7 @@ The `behavioral_fingerprint` field is a hash. The raw fingerprint vector is held
 
 The `process_recording_hash` field is a hash of an encrypted blob. The plaintext recording is never transmitted as part of the Tessera. The issuer MAY release the encrypted recording to a verifier on demand; the issuer's client MUST require explicit user consent for any such release.
 
-KYC-bound Tesserae (LOA4) reference the KYC vendor's record ID and a hash of minimized identity claims; the vendor holds the full identity record. Veritas's reference implementation does not aggregate, sell, or share KYC data.
+KYC-bound Tesserae (LOA4) reference the KYC vendor's record ID and a hash of minimized identity claims; the vendor holds the full identity record. Confirmata's reference implementation does not aggregate, sell, or share KYC data.
 
 ---
 
@@ -375,4 +375,4 @@ Implementations MAY include additional fields in any object as long as the canon
 
 ## 13. INTELLECTUAL PROPERTY
 
-This specification is licensed under Apache 2.0. The Veritas wordmark is a trademark of FRGE Nexus LLC; the Tessera protocol name and the protocol itself are not. Anyone may implement, deploy, and commercialize Tessera-conformant software without permission, subject only to the Apache 2.0 license terms.
+This specification is licensed under Apache 2.0. The Confirmata wordmark is a trademark of FRGE Nexus LLC; the Tessera protocol name and the protocol itself are not. Anyone may implement, deploy, and commercialize Tessera-conformant software without permission, subject only to the Apache 2.0 license terms.
